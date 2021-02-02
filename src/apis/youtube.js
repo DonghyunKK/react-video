@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KEY = 'AIzaSyDIwZ2OewEiZslAzpHF7wccEqbDyBla1H4';
+// const KEY = process.env.REACT_APP_API_KEY;
 
 export default axios.create({
   baseURL: 'https://www.googleapis.com/youtube/v3',
@@ -8,6 +8,6 @@ export default axios.create({
     part: 'snippet',
     type: 'video',
     maxResults: 5,
-    key: KEY
+    key: process.env.REACT_APP_API_KEY
   }
 });
